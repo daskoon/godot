@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/collectibles/PlatformCoin.gd" id="1_script"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_coin"]
+radius = 12.0
+
+[node name="PlatformCoin" type="Area2D"]
+z_index = 5
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_script")
+
+[node name="Visual" type="Node2D" parent="."]
+z_index = 5
+
+[node name="OuterGlow" type="ColorRect" parent="Visual"]
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 11.0
+color = Color(1, 0.75, 0.1, 1)
+
+[node name="InnerGold" type="ColorRect" parent="Visual"]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+color = Color(1, 0.9, 0.25, 1)
+
+[node name="CenterSparkle" type="ColorRect" parent="Visual"]
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
+color = Color(1, 1, 0.8, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_coin")

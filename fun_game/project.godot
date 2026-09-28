@@ -1,0 +1,25 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="Arcade Platformer Jump"
+run/main_scene="res://scenes/level/Level1.tscn"
+config/features=PackedStringArray("4.5", "Forward Plus")
+
+[autoload]
+
+SoundManager="*res://scripts/autoload/SoundManager.gd"
+GameManager="*res://scripts/autoload/GameManager.gd"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/size/resizable=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
